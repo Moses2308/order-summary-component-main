@@ -9,7 +9,8 @@
 body{
     min-height: 100vh;
     font-family: 'Red Hat Display', sans-serif;
-    background-color: var(--color-paleBlue);
+    /* background-color: var(--color-paleBlue); */
+    background-image: url(images/pattern-background-mobile.svg);
     background-repeat:no-repeat;
     font-size: 1rem;
     font-weight: 500;
@@ -23,6 +24,7 @@ body{
     border-radius: 1.5rem;
     margin: 1rem;
     background-color: white;
+    max-width: 390px;
 }
 
 .sub-card__container{
@@ -49,11 +51,8 @@ body{
     align-items: center;
 
     background-color: var(--color-veryPaleBlue);
-    padding: 1rem;
+    padding: 1.25rem;
     border-radius: 0.75rem;
-}
-.sub-card__plan span{
-    padding-right: 3rem;
 }
 
 .sub-card__plan span p:nth-of-type(1){
@@ -65,6 +64,15 @@ body{
     font-weight: 500;
     color: var(--color-desaturatedBlue);
 }
+.sub-card__plan img{
+    display: inline;
+}
+.plan-component{
+    display: flex;
+    gap:1rem;
+    flex-wrap: nowrap;
+}
+
 .sub-card__buttons{
     display: flex;
     flex-wrap: wrap;
@@ -88,4 +96,9 @@ body{
     color: white;
     background-color: var(--color-brightBlue);
     box-shadow: 0 0.75rem 0.75rem var(--color-paleBlue);
+}
+@media(min-width: 376px){
+    body{
+        background-image: url(images/pattern-background-desktop.svg);
+    }
 }
