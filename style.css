@@ -4,6 +4,7 @@
     --color-darkBlue:hsl(223, 47%, 23%);
     --color-paleBlue : hsl(225, 100%, 94%);
     --color-brightBlue :  hsl(245, 75%, 52%);
+    --color-brightBlueActive : hsl(245, 52%, 58%);
 }
 
 body{
@@ -64,9 +65,13 @@ body{
     font-weight: 500;
     color: var(--color-desaturatedBlue);
 }
-.sub-card__plan img{
-    display: inline;
+.sub-card__plan a{
+    color: var(--color-brightBlue);
 }
+.sub-card__plan a:active{
+    color: var(--color-brightBlueActive);
+}
+
 .plan-component{
     display: flex;
     gap:1rem;
@@ -97,6 +102,20 @@ body{
     background-color: var(--color-brightBlue);
     box-shadow: 0 0.75rem 0.75rem var(--color-paleBlue);
 }
+a:active, button:active {
+    cursor: pointer;
+    color: black;
+}
+.submit:active{
+    background-color: var(--color-brightBlueActive);
+    color: white;
+}
+
+a:hover, button:hover {
+    cursor: pointer;
+}
+
+
 @media(min-width: 376px){
     body{
         background-image: url(images/pattern-background-desktop.svg);
